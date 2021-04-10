@@ -26,7 +26,8 @@ h1 {
 
 h2 {
   margin: 2% 0;
-  font-size: 150%;
+  font-size: 250%;
+
 }
 
 nav ul {
@@ -49,13 +50,34 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1 1 0;
-  max-width: 96%;
-  margin: 2% auto;
+  /* max-width: 96%; */
+  margin: 1px 0;
+  background-color: var(--background);
 }
 
 section {
   display: flex;
-  /* flex-direct */
+}
+
+section h2 {
+  flex: 0 0 180px;
+  text-align: end;
+}
+
+section div {
+  flex: 0 0 10px;
+}
+
+section content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section content.site {
+  border: 1px solid var(--foreground);
+  /* box-sizing: content-box; */
+  height: 500px;
+  width: 500px;
 }
 
 article {
@@ -96,10 +118,8 @@ article div > * {
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1%;
+  text-align: center;
+  border-top: 2px solid var(--foreground);
   background-color: var(--background);
   color: var(--foreground);
 }
@@ -124,10 +144,24 @@ div a:hover {
   color: var(--highlight);
 }
 
+p {
+  padding: 0 0 5px 5px;
+}
+
+img {
+  width=200px;
+}
+
 .vert {
   width: 10px;
-  height: 40px;;
+  margin: 10px;
+  /* height: 40px; */
   background-color: var(--foreground);
+}
+
+.float-left {
+  float: left;
+  width: 250px;
 }
 
 @media screen and (max-width: 768px) {
