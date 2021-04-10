@@ -7,8 +7,9 @@ This is a webpage to highlight my work as a web developer.  This page will be up
 - [ ] Scroll to the appropriate section when links are clicked
 - [ ] Include sections with titled images of the developer's applications
 - [ ] The first application's image should be larger than the other applications
-- [ ] Clicking on the imageof the application should take the user to the deployed application
+- [ ] Clicking on the image of the application should take the user to the deployed application
 - [ ] The site needs to have a responsive layout (adapts to the viewport)
+- [ ] 
 
 ## Installation
 This project is just a simple one-page website with accompanying assests of a style.css file and some image files.  It should work fine if you copy all the files and file structure to your server.
