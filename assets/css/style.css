@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   line-height: 1.3;
+  margin: 66px 0;
 }
 
 header {
@@ -18,6 +19,11 @@ header {
   padding: 1%;
   background-color: var(--foreground);
   color: var(--background);
+
+  position: fixed;
+  margin-top: -66px;
+  width: 100%;
+
 }
 
 h1 {
@@ -51,12 +57,12 @@ main {
   flex-direction: column;
   flex: 1 1 0;
   /* max-width: 96%; */
-  margin: 1px 0;
   background-color: var(--background);
 }
 
 section {
   display: flex;
+  margin: 10px;
 }
 
 section h2 {
@@ -64,7 +70,7 @@ section h2 {
   text-align: end;
 }
 
-section div {
+section div.vert {
   flex: 0 0 10px;
 }
 
@@ -73,11 +79,31 @@ section content {
   flex-wrap: wrap;
 }
 
-section content.site {
+/* content.inline {
+  display: flex;
+} */
+
+div.head {
+  flex: 0 0 250px;
+  /* margin: 10px; */
+}
+
+div.text {
+  flex: 1 0 250px;
+  margin: 10px;
+}
+
+section content.site div {
   border: 1px solid var(--foreground);
   /* box-sizing: content-box; */
   height: 500px;
   width: 500px;
+  margin: 2px;
+}
+
+section content.site:hover {
+  box-shadow: inset 0px 0px 8px var(--highlight),
+  0 0 15px var(--highlight);
 }
 
 article {
@@ -123,24 +149,41 @@ footer {
   background-color: var(--background);
   color: var(--foreground);
 }
-div ul {
+
+/* section.contact content {
   display: flex;
   justify-content: space-between;
   min-width: 300px;
+
+} */
+
+.site-title {
+  border: 4px solid var(--foreground);
+  height: 40px;
+  width: 100px;
+  position: relative;
+  top: 50px;
 }
 
-div ul li {
+content ul {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-div a {
+content ul li {
+  flex: 1 1 auto;
+  min-width: 200px;
+  text-align: center;
+}
+
+content a {
   color: var(--foreground);
   font-weight: bold;
   text-decoration: none;
 }
 
-div a:hover {
+content a:hover {
   color: var(--highlight);
 }
 
@@ -148,13 +191,9 @@ p {
   padding: 0 0 5px 5px;
 }
 
-img {
-  width=200px;
-}
-
 .vert {
   width: 10px;
-  margin: 10px;
+  margin: 0px 10px;
   /* height: 40px; */
   background-color: var(--foreground);
 }
@@ -164,12 +203,37 @@ img {
   width: 250px;
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
+.site {
+  width: 100%;
+}
+
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+  /* on tablets, set columns to only be 50% of the width and not grow */
+  .site {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
-  main {
-    max-width: 1200px;
+    /* select the last child to grow to full width if it has space to grow */
+    .site:first-child {
+      flex-grow: 1;
+    }
+  }
+  
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+  /* header {
+    width: 75%;
+  } */
+
+  .site {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+
+  .site:first-child {
+    flex: 0 0 100%;
   }
 }
