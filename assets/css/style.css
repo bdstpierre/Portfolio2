@@ -5,11 +5,70 @@
   --highlight: #e866ec;
 }
 
+::selection {
+  background-color: var(--foreground);
+  color: var(var(--background));
+}
+
+html {
+  /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+  font-size: 62.5%;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  line-height: 1.3;
-  margin: 66px 0;
+  margin: 100px 0;
+  /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
+  font-size: 1.75rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.625rem;
+  color: var(--foreground);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  margin: 2% 0;
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 header {
@@ -19,21 +78,174 @@ header {
   padding: 1%;
   background-color: var(--foreground);
   color: var(--background);
+  width: 96%;
 
   position: fixed;
-  margin-top: -66px;
+  margin-top: -100px;
   width: 100%;
-
 }
 
-h1 {
-  font-size: 200%;
+header h1.page-title {
+  padding: 1rem 1.2rem;
+  font-size: 4.5rem;
+  color: var(--background);
 }
 
-h2 {
-  margin: 2% 0;
-  font-size: 250%;
+main {
+  display: flex;
+  flex-direction: column;
+  /* grow shrink basis */
+  flex: 1 0 auto;
+  width: 100%;
+  background-color: var(--background);
+  /* testing */
+  border: 1rem solid green;
+}
 
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: 1 0 auto;
+
+  margin: 10px;
+  /* testing */
+  border: 1rem solid yellow;
+}
+
+section h2 {
+  flex: 0 0 180px;
+  text-align: end;
+}
+
+section .vert {
+  flex: 0 0 10px;
+}
+
+ content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Sizes authors headshot */
+.head {
+  flex: 0 0 250px;
+  /* margin: 10px; */
+}
+
+/* Sizes about text */
+.text {
+  flex: 1 0 250px;
+  margin: 10px;
+}
+
+.card {
+  flex: 0 0 50%;
+  /* testing */
+  border: 1rem solid orange;
+}
+.card:first-child {
+  flex: 0 0 100%;
+  max-width: 100%;
+  /* testing */
+  border: 1rem solid orange;
+}
+
+.card-header {
+  border: 4px solid var(--foreground);
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 50px;
+}
+
+
+
+
+
+
+.card-body {
+  border: 1px solid pink;/*var(--foreground); */
+  /* box-sizing: content-box; */
+  height: 100px;
+  width: 100px;
+  margin: 2px;
+}
+
+section content.site:hover {
+  box-shadow: inset 0px 0px 8px var(--highlight),
+  0 0 15px var(--highlight);
+}
+
+footer {
+  text-align: center;
+  margin: 1.5rem;
+  border-top: 4px solid var(--foreground);
+  background-color: var(--background);
+  color: var(--foreground);
+  /* testing */
+  border: 1rem solid red;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.card-column {
+  flex: 1 0 50%;
+  padding: 1.5rem;
+  transition: flex-basis 500ms linear;
+  margin-bottom: 1.5rem;
+}
+
+.site-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: 100%;
+  padding 2rem;
+  color: var(--foreground);
+  outline: 2px solid var(--background);
+  outline-offset: -2px;
+  transition: all 0.5s ease-in-out;
+  grow: 1;
+}
+
+.site-card .card-header {
+  position: relative;
+  top: 15rem;
+  left: 5rem;
+  width: 300px;
+  text-align: center;
+  margin: 5rem 0 1.5rem 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 4px solid var(--foreground);
+  transition: all 0.5s ease-in-out;
+}
+
+.site-card:hover,
+.site-card:hover .card-header {
+  box-shadow: inset 0px 0px 8px var(--highlight), 0 0 15px var(--highlight);
+}
+
+/* .site-card img {
+  overflow: auto;
+  display: flex;
+  align-items: center;
+
+} */
+
+.thumb {
+  width: 250px;
 }
 
 nav ul {
@@ -52,59 +264,6 @@ nav a:hover {
   color: var(--highlight);
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 0;
-  /* max-width: 96%; */
-  background-color: var(--background);
-}
-
-section {
-  display: flex;
-  margin: 10px;
-}
-
-section h2 {
-  flex: 0 0 180px;
-  text-align: end;
-}
-
-section div.vert {
-  flex: 0 0 10px;
-}
-
-section content {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* content.inline {
-  display: flex;
-} */
-
-div.head {
-  flex: 0 0 250px;
-  /* margin: 10px; */
-}
-
-div.text {
-  flex: 1 0 250px;
-  margin: 10px;
-}
-
-section content.site div {
-  border: 1px solid var(--foreground);
-  /* box-sizing: content-box; */
-  height: 500px;
-  width: 500px;
-  margin: 2px;
-}
-
-section content.site:hover {
-  box-shadow: inset 0px 0px 8px var(--highlight),
-  0 0 15px var(--highlight);
-}
 
 article {
   border-bottom: 1px solid #13293d;
@@ -143,12 +302,6 @@ article div > * {
   border: 4px solid #b9c6ae;
 }
 
-footer {
-  text-align: center;
-  border-top: 2px solid var(--foreground);
-  background-color: var(--background);
-  color: var(--foreground);
-}
 
 /* section.contact content {
   display: flex;
@@ -157,13 +310,6 @@ footer {
 
 } */
 
-.site-title {
-  border: 4px solid var(--foreground);
-  height: 40px;
-  width: 100px;
-  position: relative;
-  top: 50px;
-}
 
 content ul {
   display: flex;
@@ -211,16 +357,17 @@ p {
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (min-width: 768px) {
   /* on tablets, set columns to only be 50% of the width and not grow */
-  .site {
+  .card {
     flex: 0 0 50%;
     max-width: 50%;
   }
 
-    /* select the last child to grow to full width if it has space to grow */
-    .site:first-child {
-      flex-grow: 1;
-    }
+  /* select the last child to grow to full width if it has space to grow */
+  .card:first-child {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
+}
   
 /* media query for larger screens */
 @media screen and (min-width: 992px) {
@@ -228,12 +375,13 @@ p {
     width: 75%;
   } */
 
-  .site {
+  .card {
     flex: 0 0 33.333%;
     max-width: 33.333%;
   }
 
-  .site:first-child {
+  .card:first-child {
     flex: 0 0 100%;
+    max-width: 100%
   }
 }
