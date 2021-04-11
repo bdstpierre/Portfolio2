@@ -2,14 +2,15 @@
 ## Description
 This is a webpage to highlight my work as a web developer.  This page will be updated as my number of projects grow.
 
+https://bdstpierre.github.io/Portfolio/
+
 # To Do
-- [ ] Include developers name, recent photo and links to sections about them
-- [ ] Scroll to the appropriate section when links are clicked
-- [ ] Include sections with titled images of the developer's applications
-- [ ] The first application's image should be larger than the other applications
-- [ ] Clicking on the image of the application should take the user to the deployed application
-- [ ] The site needs to have a responsive layout (adapts to the viewport)
-- [ ] 
+- [x] Include developers name, recent photo and links to sections about them
+- [x] Scroll to the appropriate section when links are clicked
+- [x] Include sections with titled images of the developer's applications
+- [x] The first application's image should be larger than the other applications
+- [x] Clicking on the image of the application should take the user to the deployed application
+- [x] The site needs to have a responsive layout (adapts to the viewport) 
 
 ## Installation
 This project is just a simple one-page website with accompanying assests of a style.css file and some image files.  It should work fine if you copy all the files and file structure to your server.
