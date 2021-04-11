@@ -10,6 +10,7 @@
 
   <body>
 
+    <!-- The header contains the title for the page and the navigation buttons -->
     <header>
         <h1 class="page-title">Barry St. Pierre</h1>
         <nav>
@@ -22,6 +23,13 @@
     </header>
 
     <main> 
+
+        <!-- The sections stack vertically, one for each main 
+        area of the page: About, Work, and Contact Me -->
+
+        <!-- Each section has three elements stacked horizontally: 
+        section title (fixed width), vertical bar (fixed width), and 
+        content for that section (free to use the rest of the page width) -->
 
         <section  id="about">
             <h2>About<br>Me</h2>
@@ -41,88 +49,78 @@
             </content>
         </section>
 
-        <section id="work" class="row justify-center"> <!-- row class may be misplaced-->
+        <section id="work">
             <h2>My<br>Work</h2>
             <div class="vert">
                 <p></p>
             </div>
+
+            <!-- The content for the work section is setup with a row based flexbox
+            The first child is largera nd the others flow through the page based 
+            on available space -->
+
             <content class="card-column">
-                <figure class="card site-card">
+
+                <!-- Each figure is another website card -->
+
+                <figure class="card site-card" id="pct">
                     <h3 class="card-header">
                         PCT Scheduling
                     </h3>
-                    <div class="card-body">
-                        <a href="http://www.annarbortennis.com/PCT/DEMO/">
-                            <img class="thumb"
-                            src="./assets/images/pct_thumb.png"
-                            alt="Thumbnail of PCT Website">
-                        </a>
-                    </div>
+                    <a href="http://www.annarbortennis.com/PCT/DEMO/">
+                        <div class="card-body">
+                        </div>
+                    </a>
                 </figure>
 
-                <figure class="card site-card">
+                <figure class="card site-card" id="usta">
                     <h3 class="card-header">
                         USTA Team
                     </h3>
-                    <div class="card-body">
-                        <a href="http://www.annarbortennis.com/PCT/DEMO/">
-                            <img class="thumb"
-                            src="./assets/images/pct_thumb.png"
-                            alt="Thumbnail of PCT Website">
-                        </a>
-                    </div>
+                    <a href="https://www.annarbortennis.com/usta/team.php">
+                        <div class="card-body">
+                        </div>
+                    </a>
                 </figure>
  
-                <figure class="card site-card">
+                <figure class="card site-card" id="css_about">
                     <h3 class="card-header">
                         CSS About Me
                     </h3>
-                    <div class="card-body">
-                        <a href="http://www.annarbortennis.com/PCT/DEMO/">
-                            <img class="thumb"
-                            src="./assets/images/pct_thumb.png"
-                            alt="Thumbnail of PCT Website">
-                        </a>
-                    </div>
+                    <a href="https://bdstpierre.github.io/prework-about-me/">
+                        <div class="card-body">
+                        </div>
+                    </a>
                 </figure>
 
-                <figure class="card site-card">
+                <figure class="card site-card" id="landing">
                     <h3 class="card-header">
                         Landing Page
                     </h3>
-                    <div class="card-body">
-                        <a href="http://www.annarbortennis.com/PCT/DEMO/">
-                            <img class="thumb"
-                            src="./assets/images/pct_thumb.png"
-                            alt="Thumbnail of PCT Website">
-                        </a>
-                    </div>
+                    <a href="https://bdstpierre.github.io/Landing-Site/">
+                        <div class="card-body">
+                        </div>
+                    </a>
                 </figure>
 
-                <figure class="card site-card">
+                <figure class="card site-card" id="accessibility">
                     <h3 class="card-header">
                         Accessibility
                     </h3>
-                    <div class="card-body">
-                        <a href="http://www.annarbortennis.com/PCT/DEMO/">
-                            <img class="thumb"
-                            src="./assets/images/pct_thumb.png"
-                            alt="Thumbnail of PCT Website">
-                        </a>
-                    </div>
+                    <a href="https://bdstpierre.github.io/01-Homework-Refactor_for_accessibility/">
+                        <div class="card-body">
+                        </div>
+                    </a>
                 </figure>
 
-                <figure class="card site-card">
+                <figure class="card site-card" id="snippets">
                     <h3 class="card-header">
                         CSS Snippets
                     </h3>
-                    <div class="card-body">
-                        <a href="http://www.annarbortennis.com/PCT/DEMO/">
-                            <img class="thumb"
-                            src="./assets/images/pct_thumb.png"
-                            alt="Thumbnail of PCT Website">
-                        </a>
-                    </div>
+                    <a href="https://bdstpierre.github.io/CSS-Snippet-Cheatsheet/">
+                        <div class="card-body">
+                        </div>
+                    </a>
                 </figure>
             </content>
 
