@@ -4,6 +4,8 @@ This is a webpage to highlight my work as a web developer.  This page will be up
 
 https://bdstpierre.github.io/Portfolio/
 
+![Image of Portfolio webpage](./assets/images/site-thumbnail.png)
+
 # To Do
 - [x] Include developers name, recent photo and links to sections about them
 - [x] Scroll to the appropriate section when links are clicked
