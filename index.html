@@ -1,166 +1,162 @@
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
-    <meta charset='UTF-8'/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barry St Pierre Portfolio</title>
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />  
-  </head>
+<head>
+<meta charset='UTF-8'/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Barry St Pierre Portfolio</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
 
   <body>
 
-    <!-- The header contains the title for the page and the navigation buttons -->
-    <header>
-        <h1 class="page-title">Barry St. Pierre</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#work">My Work</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main> 
-
-        <!-- The sections stack vertically, one for each main 
-        area of the page: About, Work, and Contact Me -->
-
-        <!-- Each section has three elements stacked horizontally: 
-        section title (fixed width), vertical bar (fixed width), and 
-        content for that section (free to use the rest of the page width) -->
-
-        <section  id="about">
-            <h2>About<br>Me</h2>
-            <div class="vert">
-                <p></p>
-            </div>
-            <content>
-                 <div class="head">
-                    <img src="./assets/images/Profile2.jpg" 
-                    alt="Headshot of web site author"
-                    class="float-left">
+    <div class="jumbotron text-center">
+        <h1>Barry St. Pierre</h1>
+        <p>An experieinced mechanical engineer moving into Full Stack Web Development</p>
+        <form class="form-inline" action="mailto:barry@stpierre.com?subject=Saw your portfolio&message=I have some thoughts" method="POST" name="EmailForm">
+            <div class="input-group">
+                <input type="email" class="form-control" size="50" placeholder="Email Address" required name="from:">
+                <div class="input-group-btn">
+                    <button type="submit" class="btn btn-danger">Contact</button>
                 </div>
-                <div class="text">
-                  <p>I am a mechanical engineer that has spent a long career using programming tools on an as-needed basis.  I will write Unix scripts to process a file or write a matlab script to automate some processing or create a tool, but I haven't formalized my programming skills.  I am currently taking a Full Stack Developer Boot Camp through Michigan State University to finally formalize my programming skills.</p>
-                   <p>Below you will find some examples of the web application work I have done.  Some of this work was done at least five years ago after I bought a book called <span class="title">PHP and MySQL Web Development</span> written by Luke Welling and Laura Thomson and published by SAMS.  As you can probably tell from my early web applications, this book did not cover CSS.  Once I finish the boot camp I will go back and update those early web applications.</p>
+            </div>
+        </form>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>About Company Page</h2>
+                <h4>Lorem ipsum...</h4>
+                <p>Lorem ipsum...</p>
+                <button class="btn btn-default btn-lg">Get in Touch</button>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-signal logo"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-globe logo"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2>Our Values</h2>
+                <h4><strong>MISSION:</strong> Our mission lorem ipsum...</h4>
+                <p><strong>VISION:</strong> Our vision Lorem ipsum...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center">
+        <h2>SERVICES</h2>
+        <h4>What we offer</h4>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="logo-small glyphicon glyphicon-off"></span>
+                <h4>POWER</h4>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="logo-small glyphicon glyphicon-heart"></span>
+                <h4>LOVE</h4>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="logo-small glyphicon glyphicon-lock"></span>
+                <h4>JOB DONE</h4>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="logo-small glyphicon glyphicon-leaf"></span>
+                <h4>GREEN</h4>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="logo-small glyphicon glyphicon-certificate"></span>
+                <h4>CERTIFIED</h4>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="logo-small glyphicon glyphicon-wrench"></span>
+                <h4>HARD WORK</h4>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center bg-grey">
+        <h2>Portfolio</h2>
+        <h4>What we have created</h4>
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="assets/images/bike-buddy.png" alt="Paris">
+                    <p><strong>Paris</strong></p>
+                    <p>Yes, we built Paris</p>
                 </div>
-            </content>
-        </section>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="assets/images/pct_thumb.png" alt="New York">
+                    <p><strong>New York</strong></p>
+                    <p>We built New York</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="assets/images/snippets_thumb.png" alt="San Francisco">
+                    <p><strong>San Francisco</strong></p>
+                    <p>Yes, San Fran is ours</p>
+                </div>
+            </div>            
+        </div>
+    </div>
 
-        <section id="work">
-            <h2>My<br>Work</h2>
-            <div class="vert">
-                <p></p>
+    <div class="container-fluid text-center">
+        <h2>What our customers say</h2>
+        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <h4>"This company is the best.  I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+                </div>
+                <div class="item">
+                    <h4>"One word... WOW!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+                </div>
+                <div class="item">
+                    <h4>"Could I... BE any more happy with this company?!"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+                </div>
             </div>
 
-            <!-- The content for the work section is setup with a row based flexbox
-            The first child is largera nd the others flow through the page based 
-            on available space -->
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
 
-            <content>
-
-                <!-- Each figure is another website card -->
-
-                <figure class="card site-card" id="bike-buddy">
-                    <h3 class="card-header">
-                        Bike Buddy
-                    </h3>
-                    <a href="https://bdstpierre.github.io/bike-buddy">
-                        <div class="card-body">
-                        </div>
-                    </a>
-                </figure>
-
-                <figure class="card site-card" id="pct">
-                    <h3 class="card-header">
-                        PCT Scheduling
-                    </h3>
-                    <a href="http://www.annarbortennis.com/PCT/DEMO/">
-                        <div class="card-body">
-                        </div>
-                    </a>
-                </figure>
-
-                <figure class="card site-card" id="usta">
-                    <h3 class="card-header">
-                        USTA Team
-                    </h3>
-                    <a href="https://www.annarbortennis.com/usta/team.php">
-                        <div class="card-body">
-                        </div>
-                    </a>
-                </figure>
- 
-                <figure class="card site-card" id="css_about">
-                    <h3 class="card-header">
-                        CSS About Me
-                    </h3>
-                    <a href="https://bdstpierre.github.io/prework-about-me/">
-                        <div class="card-body">
-                        </div>
-                    </a>
-                </figure>
-
-                <figure class="card site-card" id="landing">
-                    <h3 class="card-header">
-                        Landing Page
-                    </h3>
-                    <a href="https://bdstpierre.github.io/Landing-Site/">
-                        <div class="card-body">
-                        </div>
-                    </a>
-                </figure>
-
-                <figure class="card site-card" id="accessibility">
-                    <h3 class="card-header">
-                        Accessibility
-                    </h3>
-                    <a href="https://bdstpierre.github.io/01-Homework-Refactor_for_accessibility/">
-                        <div class="card-body">
-                        </div>
-                    </a>
-                </figure>
-
-                <figure class="card site-card" id="snippets">
-                    <h3 class="card-header">
-                        CSS Snippets
-                    </h3>
-                    <a href="https://bdstpierre.github.io/CSS-Snippet-Cheatsheet/">
-                        <div class="card-body">
-                        </div>
-                    </a>
-                </figure>
-            </content>
-
-            
-
-        </section>
-
-        <section id="contact">
-            <h2>Contact<br>Me</h2>
-            <div class="vert">
-                <p></p>
-            </div>
-            <content>
-                <ul>
-                    <li><a>734-657-7730</a></li>
-                    <li><a href="mailto:barry@stpierre.com">barry@stpierre.com</a></li>
-                    <li><a href="https://github.com/bdstpierre">github</a></li>
-                    <li><a href="https://linkedin.com/in/barry-st-pierre">LinkedIn</a></li>
-                    <li><a href="./assets/bstpierre_resume.pdf">Resume</a></li>
-                </ul>
-            </content>
-    
-        </section>
-
-    </main>
-
-
-    <footer>
-        &copy; 2021
-    </footer>
 
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </html>

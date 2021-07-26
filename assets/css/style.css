@@ -1,365 +1,74 @@
-/* This area sets up the variables used for the page.  
-The color theme for the page can be edited hear */
-
 :root {
-  --background: hsl(210, 49%, 81%);
-  --foreground: hsl(209, 56%, 19%);
-  --header: #33393f;
-  --highlight: #e866ec;
+  --dark-color: #231010;
+  --light-color: #d9ead3;
+  --shadow-color: #a7a7a7;
+  --bright-color: #3ba814;
 }
 
-/* Smooth scroll behavior is enabled for the whole document */
-
-html {
-  /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
-  font-size: 62.5%;
-  scroll-behavior: smooth;
+.jumbotron {
+  background-color: var(--dark-color);
+  color: #ffffff;
+  padding: 100px 25px;
 }
 
-/* The body container is set up aso the minimum width is 574px
-any narrow page and the elements start stacking awkwardly */
-
-body {
-  margin: 0 0;
-  /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-
-  /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
-  font-size: 1.75rem;
-  line-height: 1.5;
-  color: var(--foreground);
-  background-color: var(--background);
-  min-width: 575px;
-  display: flex;
-  flex-direction: column;
+.container-fluid {
+  padding: 60px 50px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0.625rem;
-  color: var(--foreground);
-  font-weight: 700;
-  line-height: 1.1;
+.logo {
+  color: var(--bright-color);
+  font-size: 200px;
 }
 
-h1 {
-  font-size: 4rem;
-  text-align: center;
+.logo-small {
+  color: var(--bright-color);
+  font-size: 50px;
 }
 
-h2 {
-  margin: 2% 0;
-  font-size: 4rem;
+.bg-grey {
+  background-color: var(--shadow-color);
 }
 
-h3 {
-  font-size: 3rem;
+.thumbnail {
+  padding: 0 0 15px 0;
+  border: none;
+  border-radius: 0;
 }
 
-h4 {
-  font-size: 2.5rem;
-}
-
-h5 {
-  font-size: 2rem;
-}
-
-h6 {
-  font-size: 1.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-/* The header is set up as a row based flexbox so the two items <page title> 
-and <navigation bar> are distributed across the page */
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1%;
-  background-color: var(--foreground);
-  color: var(--background);
+.thumbnail img {
   width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
 }
 
-header h1.page-title {
-  padding: 1rem 1.2rem;
-  font-size: 4.5rem;
-  color: var(--background);
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+  color: #f4511e;
 }
 
-/* The navigation bar is also a row based flexbox to hold the three
-navigation menu items */
-
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  min-width: 300px;
+.carousel-indicators li {
+  border-color: #f4511e;
 }
 
-nav a {
-  color: var(--background);
-  font-weight: bold;
-  text-decoration: none;
-  border: 2px solid var(--foreground);
-  padding: 2px;
+.carousel-indicators li.active {
+  background-color: #f4511e;
 }
 
-/* A little reverse video for the menu items on hover  */
-
-nav a:hover {
-  color: var(--foreground);
-  background: var(--background);
-  border: 2px solid var(--background);
+.item h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  font-weight: 400;
+  font-style: italic;
+  margin: 70px 0;
 }
 
-/* The main html element is a container for a column based flexbox. 
-The three sections stack inside of main like pizza boxes */
-
-main {
-  display: flex;
-  flex-direction: column;
-  /* grow shrink basis */
-  flex: 1 0 auto;
-  width: 100%;
-  background-color: var(--background);
+.item span {
+  font-style: normal;
 }
 
-/* Each section is the aforementioned pizza box.  Inside the section
-is a row based flexbox that holds the title, vertical bar and content 
-for the section */
-
-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  flex: 1 0 auto;
-
-  margin: 10px;
-}
-
-/* section title - fixed width */
-section h2 {
-  flex: 0 0 180px;
-  text-align: end;
-}
-
-/* vertical bar - fixed width */
-section .vert {
-  flex: 0 0 10px;
-}
-/* section content - free to use the rest of the page */
- content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-/* within the About Me section the author headshot and the text are formatted  */
-/* Sizes authors headshot */
-.head {
-  flex: 0 0 250px;
-}
-
-/* Sizes about text */
-.text {
-  flex: 1 0 250px;
-  margin: 10px;
-}
-
-/* In the My Work section, there are a series of "cards" that make up each website
-Each card is contained in a figure element which contains an h3 element and 
-am anchor element  */
-
-.card {
-  flex: 0 0 50%;
-  margin: 10px;
-  border: 5px solid var(--foreground);
-}
-
-/* each site has a unique ID for pulling a unique background image  */
-#bike-buddy {
-  background-image: url(../images/bike-buddy.png);
-  background-size: cover;
-}
-
-#pct {
-  background-image: url(../images/pct_thumb.png);
-  background-size: cover;
-}
-
-#usta {
-  background-image: url(../images/usta_thumb.png);
-  background-size: cover;
-}
-
-#css_about {
-  background-image: url(../images/css_about_thumb.png);
-  background-size: cover;
-}
-
-#landing {
-  background-image: url(../images/landing_thumb.png);
-  background-size: cover;
-}
-
-#accessibility {
-  background-image: url(../images/accessibility_thumb.png);
-  background-size: cover;
-}
-
-#snippets {
-  background-image: url(../images/snippets_thumb.png);
-  background-size: cover;
-}
-
-/* The first child card is formatted larger than the rest  */
-.card:first-child {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-/* The heading for the card is formatted in a box with a border and
-positioned below the top of the card so it floats above the image  */
-.card-header {
-  font-size: 1em;
-  border: 4px solid var(--foreground);
-  background: var(--background);
-  height: 50px;
-  width: 150px;
-  padding: 2px;
-  position: relative;
-  top: 150px;
-  left: 20px;
-}
-
-/* The card body has to be adjusted to cover the space that the header 
-left  */
-.card-body {
-  position: relative;
-  top: -58px;
-  left: -4px;
-  padding: 2px;
-  border: 2px var(--foreground);
-  box-sizing: content-box;
-  height: 282px;
-  width: 100%;
-  margin: 2px;
-}
-
-/* Each card gets a glow when the mouse hovers over it  */
-.site-card:hover,
-.site-card:hover .card-header {
-  box-shadow: inset 0px 0px 8px var(--highlight), 0 0 15px var(--highlight);
-}
-
-/* The footer is a minimal affair */
-
-footer {
-  text-align: center;
-  margin: 1.5rem;
-  border-top: 4px solid var(--foreground);
-  background-color: var(--background);
-  color: var(--foreground);
-}
-
-/* The Contact Me section has a menu of items to take the user 
-to various means of contact */
-/* The menu is setup as a row flexbox */
-content ul {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-content ul li {
-  flex: 1 1 auto;
-  min-width: 200px;
-  text-align: center;
-}
-
-/* The menu items reverse video when the mouse hovers over them */
-
-content a {
-  color: var(--foreground);
-  font-weight: bold;
-  text-decoration: none;
-  border: 2px solid var(--background);
-  padding: 2px;
-}
-
-content a:hover {
-  color: var(--background);
-  background-color: var(--foreground);
-  border: 2px solid var(--background);
-  padding: 4px;
-
-}
-
-p {
-  padding: 0 0 5px 5px;
-}
-
-.vert {
-  width: 10px;
-  margin: 0px 10px;
-  background-color: var(--foreground);
-}
-
-.float-left {
-  float: left;
-  width: 250px;
-}
-
-.site {
-  width: 100%;
-}
-
-.card {
-  flex: 1 1 100%;
-  max-width: 100%;
-}
-
-.card:first-child {
-  flex: 1 1 100%;
-  max-width: 97%
-}
-
-
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
-  /* on tablets, set columns to only be 50% of the width and not grow */
-  .card {
-    flex: 1 1 50%;
-    max-width: 50%;
-  }
-
-  /* select the first child to grow to full width if it has space to grow */
-  .card:first-child {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-  
-/* media query for larger screens */
-@media screen and (min-width: 992px) {
-
-  .card {
-    flex: 1 1 33%;
-    max-width: 31.3%;
-  }
-
-  .card:first-child {
-    flex: 1 1 100%;
-    max-width: 97%
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
   }
 }
