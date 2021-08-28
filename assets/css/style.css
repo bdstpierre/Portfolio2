@@ -6,9 +6,9 @@
 }
 
 body {
-  font: 400 15px Lato, sans-serif;
+  font: 400 18px Lato, sans-serif;
   line-height: 1.8;
-  color: var(--shadow-color);
+  color: var(--dark-color);
 }
 
 h2 {
