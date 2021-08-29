@@ -33,6 +33,12 @@ img {
   border-color: var(--dark-color);
 }
 
+.styled-list {
+  list-style-type: disc !important;
+  padding-left:1em !important;
+  margin-left:1em;
+}
+
 .jumbotron {
   background-color: var(--dark-color);
   color: var(var(--light-color));
@@ -98,11 +104,15 @@ img {
 .panel {
   border: 1px solid var(--bright-color);
   border-radius: 0;
-  transition: box-shadow 0.5s;;
+  transition: box-shadow 0.5s;
 }
 
 .panel:hover {
   box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+
+.panel-body {
+  text-align: left;
 }
 
 .panel-footer .btn:hover {
