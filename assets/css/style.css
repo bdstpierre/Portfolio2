@@ -33,6 +33,13 @@ img {
   border-color: var(--dark-color);
 }
 
+img.icon {
+  border: 0px;
+  border-style: solid;
+  border-color: var(--shadow-color);
+  width: 32px;
+}
+
 .styled-list {
   list-style-type: disc !important;
   padding-left:1em !important;
